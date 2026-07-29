@@ -5,6 +5,9 @@ body > header {
     align-items: center;
     padding: 1rem;
     background-color: #cfcfcf;
+
+    position: sticky;
+    top: 0;
 }
 
 body > header img {
