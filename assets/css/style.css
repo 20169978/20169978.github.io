@@ -54,7 +54,7 @@ nav li:not(:last-child) ::after {
 
 /* -- Main -- */
 aside {
-    display: none;
+    display: flex;
 }
 
 /* -- Footer -- */
