@@ -1,56 +1,39 @@
-
 /* -- Header -- */
-body > header {
+body>header {
     display: flex;
-    align-items: center;
-    padding: 1rem;
+    align-items: left;
+    flex-direction: column;
+    padding: 0;
     background-color: #cfcfcf;
 
     position: sticky;
     top: 0;
 }
 
-body > header img {
-    display: none;
+body>header div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+body>header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+body>header img {
+    display: block;
 }
 
 nav {
-    display: none;
-}
-
-#toggle-navigation {
-    margin-left: auto;
-
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* -- Main -- */
-aside {
-    display: none;
-}
-
-/* -- Footer -- */
-body > footer img {
-    display: none;
-}
-
-body > footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 100px;
-    border-top: 1px solid #000;
+    justify-content: center;
+    margin-right: 50%;
 }
 
-body > footer p {
-    margin: 5px 0;
-}
-
-body > footer ul {
+nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,7 +42,48 @@ body > footer ul {
     margin: 0;
 }
 
-body > footer li:not(:last-child) ::after {
+nav li:not(:last-child) ::after {
+    content: "";
+    border-right: 1px solid #000;
+    margin: 0px 40px;
+}
+
+#toggle-navigation {
+    display: None;
+}
+
+/* -- Main -- */
+aside {
+    display: none;
+}
+
+/* -- Footer -- */
+body>footer img {
+    display: none;
+}
+
+body>footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    border-top: 1px solid #000;
+}
+
+body>footer p {
+    margin: 5px 0;
+}
+
+body>footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body>footer li:not(:last-child) ::after {
     content: "";
     border-right: 1px solid #000;
     margin: 0px 10px;
@@ -71,4 +95,83 @@ article {
     grid-template-columns: 1fr;
     align-items: center;
     padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    /* -- Header -- */
+    body>header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background-color: #cfcfcf;
+
+        position: sticky;
+        top: 0;
+    }
+
+    body>header img {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #toggle-navigation {
+        margin-left: auto;
+
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* -- Main -- */
+    aside {
+        display: none;
+    }
+
+    /* -- Footer -- */
+    body>footer img {
+        display: none;
+    }
+
+    body>footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+        border-top: 1px solid #000;
+    }
+
+    body>footer p {
+        margin: 5px 0;
+    }
+
+    body>footer ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    body>footer li:not(:last-child) ::after {
+        content: "";
+        border-right: 1px solid #000;
+        margin: 0px 10px;
+    }
+
+    /* -- Article -- */
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 10px;
+    }
+
 }
