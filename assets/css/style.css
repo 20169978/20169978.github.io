@@ -1,0 +1,24 @@
+body > header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #cfcfcf;
+}
+
+body > header img {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+#toggle-navigation {
+    margin-left: auto;
+
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
