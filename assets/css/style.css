@@ -2,19 +2,16 @@
 body>header {
     display: flex;
     align-items: left;
-    flex-direction: column;
     padding: 0;
     background-color: #cfcfcf;
+    height: 64px;
 
     position: sticky;
     top: 0;
 }
 
-body>header div {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
+body>header img {
+    display: block;
 }
 
 body>header h1 {
@@ -23,14 +20,14 @@ body>header h1 {
     font-size: 1.5rem;
 }
 
-body>header img {
-    display: block;
-}
-
 nav {
     display: flex;
     justify-content: center;
-    margin-right: 50%;
+    padding-right: 50%;
+    background-color: #f1f1f1;
+
+    position: sticky;
+    top: 64px;
 }
 
 nav ul {
@@ -132,7 +129,6 @@ article {
 
 
 @media (max-width: 768px) {
-
     /* -- Header -- */
     body>header {
         display: flex;
@@ -140,6 +136,7 @@ article {
         align-items: center;
         padding: 1rem;
         background-color: #cfcfcf;
+        height: auto;
 
         position: sticky;
         top: 0;
