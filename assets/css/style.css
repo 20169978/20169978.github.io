@@ -1,7 +1,6 @@
 /* -- Header -- */
 body>header {
     display: flex;
-    align-items: left;
     padding: 0;
     background-color: #cfcfcf;
     height: 64px;
@@ -56,8 +55,8 @@ main {
 
     display: grid;
     
-    grid-template-columns: 1fr, 1fr, 1fr;    
-    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-template-rows: 1fr 1fr;
 
     align-items: start;
 }
