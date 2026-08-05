@@ -167,6 +167,12 @@ article {
         display: none;
     }
 
+    main {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     /* -- Footer -- */
 
     body>footer {
