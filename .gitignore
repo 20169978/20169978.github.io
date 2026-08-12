@@ -2,12 +2,12 @@
 ### Added by .... YYYY-MM-DD
 
 # Ignore the evidence folders
-./phase-1/evidence/
-./phase-1/evidence/*
-./phase-2/evidence/
-./phase-2/evidence/*
-./phase-3/evidence/
-./phase-3/evidence/*
+/phase-1/evidence/
+/phase-1/evidence/*
+/phase-2/evidence/
+/phase-2/evidence/*
+/phase-3/evidence/
+/phase-3/evidence/*
 
 
 ### Force ignore the .idea folder and all its contents
