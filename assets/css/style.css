@@ -1,9 +1,21 @@
+:root {
+    --header-color: #3A405A;
+    --header-text-color: #FFFFFF;
+
+    --nav-color: #FFB100;
+    --nav-text-color: #000000;
+
+    --footer-color: #3A405A;
+    --footer-text-color: #FFFFFF;
+}
+
 /* -- Header -- */
 body>header {
     display: flex;
     padding: 0;
-    background-color: #cfcfcf;
+    background-color: var(--header-color);
     height: 64px;
+    color: var(--header-text-color);
 
     position: sticky;
     top: 0;
@@ -23,7 +35,8 @@ nav {
     display: flex;
     justify-content: center;
     padding-right: 50%;
-    background-color: #f1f1f1;
+    background-color: var(--nav-color);
+    color: var(--nav-text-color);
 
     position: sticky;
     top: 64px;
@@ -95,7 +108,8 @@ body>footer {
     flex-direction: row;
     align-items: center;
     padding-bottom: 100px;
-    border-top: 1px solid #000;
+    background-color: var(--footer-color);
+    color: var(--footer-text-color);
 
     justify-content: space-around;
 }
@@ -115,7 +129,7 @@ body>footer ul {
 
 body>footer li:not(:last-child) ::after {
     content: "";
-    border-right: 1px solid #000;
+    border-right: 1px solid var(--footer-text-color);
     margin: 0px 10px;
 }
 
@@ -135,7 +149,8 @@ article {
         flex-direction: row;
         align-items: center;
         padding: 1rem;
-        background-color: #cfcfcf;
+        background-color: var(--header-color);
+        color: var(--header-text-color);
         height: auto;
 
         position: sticky;
@@ -152,6 +167,7 @@ article {
 
     #toggle-navigation {
         margin-left: auto;
+        color: var(--nav-color);
 
         display: block;
         background: none;
