@@ -100,27 +100,17 @@ main > .fourth-article {
   grid-row: 2;
 }
 
-article > .content-container {
+article {
   display: flex;
   flex-direction: column;
 }
 
-article > .content-container > .content {
-  display: flex;
-  flex-direction: column;
-}
-
-article > .content-container > .image-container {
-  margin: 0;
-  padding: 0;
-}
-
-article > .content-container > .image-container img {
+article > img {
   width: 100%;
   height: auto;
 }
 
-article > .content-container > .image-container > .image-caption {
+article > .image-caption {
   font-size: 0.8rem;
   position: relative;
   padding: 5px;
