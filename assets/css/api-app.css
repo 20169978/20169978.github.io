@@ -1,0 +1,34 @@
+.api-app {
+    width: 100%;
+    justify-items: center;
+}
+
+.api-app > form {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+}
+
+.api-app > form > fieldset {
+    display: block;
+
+    justify-items: center;
+
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+#api-checkboxes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#api-input-fieldset {
+    display: grid;
+    gap: 10px;
+}
+
+#api-input-fieldset > input {
+    width: 100%;
+    padding: 5px;
+}

@@ -92,16 +92,18 @@
         <form>
           <fieldset>
             <h3>Pick from the following API's</h3>
-            <label>
-              <input type="checkbox" class="api-checkbox" id="sudoku" value="sudoku" />
-              Sudoku
-            </label>
-            <label>
-              <input type="checkbox" class="api-checkbox" id="cocktail" value="cocktail" />
-              Cocktail
-            </label>
+            <div id="api-checkboxes">
+              <label>
+                <input type="checkbox" class="api-checkbox" id="sudoku" value="sudoku" />
+                Sudoku
+              </label>
+              <label>
+                <input type="checkbox" class="api-checkbox" id="cocktail" value="cocktail" />
+                Cocktail
+              </label>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset id="api-input-fieldset">
             <input type="text" id="api-input" placeholder="Enter your input here..." />
             <button type="submit" id="api-submit">Get Response</button>
           </fieldset>
