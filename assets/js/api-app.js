@@ -53,7 +53,16 @@ async function CallNinjaAPI(url) {
 }
 
 async function CallSudokuAPI() {
-    let query = api_query_input.value;// Need to format the input to match the API's expected format Or handle input errors
+    let query = api_query_input.value;
+    query = query.trim().toLowerCase();
+    query = query == ""? "medium": query;
+
+    if(!(["easy", "medium", "hard"].includes(query))) {
+        DisplayErrorMessage("Input must be easy,medium or hard.");
+        return;
+    }
+
+    api_query_input.value = query;
     
     const url = `https://api.api-ninjas.com/v1/sudokugenerate?difficulty=${query}`;
 
@@ -74,11 +83,21 @@ async function CallSudokuAPI() {
 }
 
 async function CallCocktailAPI() {
-    let query = api_query_input.value;// Need to format the input to match the API's expected format Or handle input errors
+    let query = api_query_input.value;
+
+    if (query == "") {
+        DisplayErrorMessage("Enter any keywords.");
+        return;
+    }
     
     const url = `https://api.api-ninjas.com/v1/cocktail?name=${query}`;
 
     const data = await CallNinjaAPI(url);
+
+    if (data.length == 0) {
+        DisplayErrorMessage("No cocktail found.");
+        return;
+    }
 
     const temp = document.querySelector('#cocktail-template');
     api_result_div.innerHTML = "";
@@ -96,4 +115,11 @@ async function CallCocktailAPI() {
 
         api_result_div.append(clone);
     });
+}
+
+function DisplayErrorMessage(message) {
+    const p = document.createElement("p");
+    p.innerText = message;
+    api_result_div.innerHTML = "";
+    api_result_div.append(message);
 }
