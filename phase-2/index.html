@@ -109,7 +109,289 @@
           </fieldset>
           <fieldset>
             <h3>Here is the result!</h3>
-            <p id="api-result">Your result will appear here...</p>
+            <div id="api-result">
+              <p>
+                Your result will appear here...
+              </p>
+            </div>
+
+            <template id="sudoku-template">
+              <table class="sudoku-table">
+                <tbody>
+                  <tr class="row" data-row="0">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="1">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="2">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="3">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="4">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="5">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="6">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="7">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                  <tr class="row" data-row="8">
+                    <td>
+                      <p class="cell" data-col="0"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="1"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="2"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="3"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="4"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="5"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="6"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="7"></p>
+                    </td>
+                    <td>
+                      <p class="cell" data-col="8"></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </template>
+
+            <template id="cocktail-template">
+              <section class="cocktail-section">
+                <header>
+                  <h3 class="cocktail-name"></h3>
+                  <h5 class="cocktail-instructions"></p>
+                </header>
+                <div class="cocktail-ingredients"></div>
+              </section>
+            </template>
           </fieldset>
         </form>
       </article>

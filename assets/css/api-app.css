@@ -71,7 +71,36 @@ aside {
     cursor: pointer;
 }
 
+#api-result {
+    width: 100%;
+    justify-items: center;
+    max-height: 600px;
+    overflow-y: auto;
+}
 
+.sudoku-table {
+    border: 1px solid black;
+
+}
+
+.sudoku-table td {
+    width: 30px;
+    height: 30px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    justify-items: center;
+}
+
+.sudoku-table p {
+    margin: 0px;
+}
+
+.cocktail-section {
+    width: 100%;
+    border: 1px solid black;
+    margin: 5px 0px;
+    padding: 0px 3px;
+}
 
 @media (min-width: 768px) {
 
