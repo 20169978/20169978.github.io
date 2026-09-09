@@ -1,3 +1,17 @@
+main {
+    grid-template-rows: auto 1fr;
+}
+
+main > .api-app {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 3;
+    grid-row: 2 / 3;
+}
+
 .api-app {
     width: 100%;
     justify-items: center;
@@ -55,4 +69,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) {
+
 }
