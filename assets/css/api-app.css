@@ -3,6 +3,18 @@
     justify-items: center;
 }
 
+.api-app > header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--form-color);
+    color: var(--form-text-color);
+}
+
 .api-app > form {
     width: 100%;
     display: grid;
@@ -20,9 +32,12 @@
 #api-checkboxes {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap:20px;
 }
 
+.api-checkbox {
+    align-items: center;
+}
 #api-input-fieldset {
     display: grid;
     gap: 10px;
@@ -31,4 +46,13 @@
 #api-input-fieldset > input {
     width: 100%;
     padding: 5px;
+}
+
+#api-submit {
+    padding: 5px 10px;
+    background-color: var(--input-color);
+    color: var(--input-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
