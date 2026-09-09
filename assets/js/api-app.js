@@ -49,7 +49,7 @@ async function CallNinjaAPI(url) {
             'X-Api-Key': 'Dafq1S3dAnhAyARQhqXbDiQESyvr8m4jpaxcycVr'
         }
     });
-    return response.json();
+    return response;
 }
 
 async function CallSudokuAPI() {
@@ -66,7 +66,12 @@ async function CallSudokuAPI() {
     
     const url = `https://api.api-ninjas.com/v1/sudokugenerate?difficulty=${query}`;
 
-    const data = await CallNinjaAPI(url);// handle errors
+    const response = await CallNinjaAPI(url);
+    if (!response.ok) {
+        DisplayErrorMessage(response.statusText);
+        return
+    }
+    const data = await response.json();
     
     const temp = document.querySelector('#sudoku-template');
     const clone = temp.content.cloneNode(true);
@@ -92,7 +97,12 @@ async function CallCocktailAPI() {
     
     const url = `https://api.api-ninjas.com/v1/cocktail?name=${query}`;
 
-    const data = await CallNinjaAPI(url);
+    const response = await CallNinjaAPI(url);
+    if (!response.ok) {
+        DisplayErrorMessage(response.statusText);
+        return
+    }
+    const data = await response.json();
 
     if (data.length == 0) {
         DisplayErrorMessage("No cocktail found.");
