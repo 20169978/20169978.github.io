@@ -1,14 +1,36 @@
+@keyframes slide-right-to-left {
+    from {
+        transform: translateX(100%);
+    }
 
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-left-to-right {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
 
 @media (max-width: 768px) {
-    @keyframes slide-right-to-left {
-        from {
-            left: 100px;
-        }
+    body {
+        overflow-x: hidden;
+    }
 
-        to {
-            left:0
-        }
+    body > header {
+        padding: 0px;
+        height: 128px;
+    }
+
+    nav {
+        position: sticky;
+        top: 128px;
     }
 
     nav.opened {
@@ -16,7 +38,12 @@
         justify-content: left;
         padding: 0;
 
-        animation: 3s ease-in 1s 1 normal both paused slide-right-to-left;
+        animation-name: slide-right-to-left;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
     }
 
     nav > ul {
@@ -31,6 +58,13 @@
     }
 
     nav:not(.opened) {
-        display: None;
+        display: flex;
+
+        animation-name: slide-left-to-right;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
     }
 }
