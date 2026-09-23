@@ -69,7 +69,7 @@ nav li:not(:last-child) ::after {
   margin: 0px 40px;
 }
 
-#toggle-navigation {
+.toggle-navigation {
   display: None;
 }
 
@@ -198,7 +198,7 @@ article {
     display: none;
   }
 
-  #toggle-navigation {
+  .toggle-navigation {
     margin-left: auto;
     color: var(--nav-color);
 

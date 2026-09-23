@@ -1,0 +1,36 @@
+
+
+@media (max-width: 768px) {
+    @keyframes slide-right-to-left {
+        from {
+            left: 100px;
+        }
+
+        to {
+            left:0
+        }
+    }
+
+    nav.opened {
+        display: flex;
+        justify-content: left;
+        padding: 0;
+
+        animation: 3s ease-in 1s 1 normal both paused slide-right-to-left;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li:not(:last-child) ::after {
+        content: "";
+        border: 0;
+        margin: 0px;
+    }
+
+    nav:not(.opened) {
+        display: None;
+    }
+}
