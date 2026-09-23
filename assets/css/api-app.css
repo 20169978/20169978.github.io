@@ -72,10 +72,13 @@ aside {
 }
 
 #api-result {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-items: center;
+    align-items: center;
     max-height: 600px;
     overflow-y: auto;
+    gap: 5px;
 }
 
 .sudoku-table {
@@ -84,15 +87,40 @@ aside {
 }
 
 .sudoku-table td {
-    width: 30px;
+    max-width: 30px;
+    min-width: 20px;
     height: 30px;
-    padding: 2px 5px;
+    padding: auto;
     border: 1px solid black;
     justify-items: center;
 }
 
+.cell-displayer.filled {
+    font-weight: 600;
+}
+
 .sudoku-table p {
     margin: 0px;
+}
+
+.sudoku-table select {
+    border: 0;
+}
+
+.sudoku-table td.answered.correct {
+    background-color: var(--form-color);
+}
+.sudoku-table td.answered:not(.correct) {
+    background-color: var(--nav-color);
+}
+
+.get-sudoku-solution {
+    padding: 5px 10px;
+    background-color: var(--input-color);
+    color: var(--input-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .cocktail-section {
