@@ -135,7 +135,7 @@ function DisplaySudokuSolution() {
   })
 
   const p = api_result_div.querySelector(".message");
-  p.innerText = `${correct / total == NaN ? 0 : correct / total * 100} % Correct`;
+  p.innerText = `${correct / total == NaN ? 0 : Math.round(correct / total * 100)} % Correct`;
 }
 
 async function CallCocktailAPI() {
