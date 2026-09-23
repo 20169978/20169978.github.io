@@ -82,11 +82,60 @@ async function CallSudokuAPI() {
         .querySelector(`.row[data-row="${i}"]`)
         .querySelector(`.cell[data-col="${j}"]`);
       const number = data.puzzle[i][j];
-      cell.innerText = number ?? "?";
+      const solution = data.solution[i][j];
+
+      if (number == null) {
+        const cell_displayer_temp = document.querySelector("#sudoku-selectable-cell-template");
+        const cell_displayer = cell_displayer_temp.content.cloneNode(true);
+
+        cell_displayer.querySelector(".cell-displayer").dataset.solution = solution;
+
+        cell.append(cell_displayer);
+      } else {
+        const cell_displayer_temp = document.querySelector("#sudoku-filled-cell-template");
+        const cell_displayer = cell_displayer_temp.content.cloneNode(true);
+        cell_displayer.querySelector('.cell-displayer').innerText = number;
+
+        cell.append(cell_displayer);
+      }
     }
   }
+  const button = clone.querySelector(".get-sudoku-solution");
+  button.addEventListener("click", (e) => 
+    {
+      e.preventDefault();
+      DisplaySudokuSolution()});
+
   api_result_div.innerHTML = "";
   api_result_div.append(clone);
+}
+
+function DisplaySudokuSolution() {
+  const answered = api_result_div.querySelector('.sudoku-table');
+
+  let total = 0;
+  let correct = 0;
+
+  const cells = answered.querySelectorAll(".cell");
+
+  cells.forEach((cell) => {
+    const answer = cell.querySelector(".cell-displayer");
+
+    if (answer.classList.contains("selectable")) {
+      total += 1;
+      cell.classList.add("answered");
+
+      if (answer.dataset["solution"] == parseInt(answer.value)) {
+        correct += 1;
+        cell.classList.add("correct");
+      } else {
+        cell.classList.remove("correct");
+      }      
+    }
+  })
+
+  const p = api_result_div.querySelector(".message");
+  p.innerText = `${correct / total == NaN ? 0 : correct / total * 100} % Correct`;
 }
 
 async function CallCocktailAPI() {
