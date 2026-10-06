@@ -31,12 +31,13 @@
     nav {
         position: sticky;
         top: 128px;
+        height: 128px;
     }
 
     nav.opened {
         display: flex;
         justify-content: left;
-        padding: 0;
+        padding: 10px;
 
         animation-name: slide-right-to-left;
         animation-duration: 0.5s;
@@ -49,6 +50,8 @@
     nav > ul {
         display: flex;
         flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
     }
 
     nav li:not(:last-child) ::after {
@@ -66,5 +69,10 @@
         animation-iteration-count: 1;
         animation-play-state: running;
         animation-fill-mode: forwards;
+    }
+
+    main {
+        position: relative;
+        top: -128px;
     }
 }
